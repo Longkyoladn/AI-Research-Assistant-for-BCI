@@ -1,6 +1,6 @@
 ---
 name: bci-paper-auditor
-description: Audit chuyên sâu nội dung của một paper PDF về Brain-Computer Interface (BCI), EEG, cognitive neuroscience hoặc neural decoding, với dẫn chứng theo trang và kiểm tra figures, tables, equations, methods, results, validity và reproducibility. Dùng khi người dùng yêu cầu phân tích toàn văn một paper; không dùng cho tổng hợp nhiều paper, citation audit của một báo cáo hoặc tóm tắt chỉ dựa trên abstract.
+description: Audit phê bình một paper (validity, leakage, reproducibility, evidence ledger). Chỉ dùng khi người dùng gọi đích danh skill này hoặc yêu cầu rõ "audit"; để đọc, dịch hoặc tìm hiểu nội dung một paper thì dùng bci-paper-reader.
 ---
 
 # BCI Paper Auditor
