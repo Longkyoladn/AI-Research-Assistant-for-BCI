@@ -1,5 +1,6 @@
 .venv/
 tmp/
 __pycache__/
-# text goc va anh trang do prepare tao, tai lap duoc tu PDF
-knowledge/paper-notes/*/source/
+# ban dich toan van va phan tich tung paper: chi luu tren may, khong day len git
+knowledge/paper-notes/*
+!knowledge/paper-notes/.gitkeep
