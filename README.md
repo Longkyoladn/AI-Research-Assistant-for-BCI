@@ -22,18 +22,14 @@ Workspace phục vụ nghiên cứu về Brain-Computer Interface (BCI), EEG Sig
 
 Các thư mục dữ liệu có thể chứa nội dung lớn hoặc nhạy cảm. Không gửi dữ liệu người tham gia tới dịch vụ bên ngoài khi chưa được cho phép. Giữ dữ liệu gốc bất biến; lưu biến đổi, tham số và kết quả vào vị trí tách biệt để hỗ trợ reproducibility.
 
-## Quy ước nghiên cứu
+## Cách dùng
 
-- Quy tắc làm việc chung nằm trong [`AGENTS.md`](AGENTS.md).
-- Mẫu đầu ra tái sử dụng nằm trong [`reports/RESEARCH_REPORT_TEMPLATE.md`](reports/RESEARCH_REPORT_TEMPLATE.md).
-- Mỗi paper nên có một định danh ổn định trong tên file, ưu tiên arXiv ID hoặc DOI đã chuẩn hóa khi đã kiểm chứng.
-- Ghi `không được báo cáo` hoặc `chưa kiểm tra được` thay vì suy đoán dữ kiện thiếu.
-- Không ghi đè paper, metadata, note, matrix, experiment hoặc report hiện có nếu chưa xác nhận phạm vi thay đổi.
+- Quy tắc chung: [`AGENTS.md`](AGENTS.md).
+- Đọc một paper: gọi skill `bci-paper-reader` với tên file trong `papers/raw/` hoặc arXiv ID, rồi gõ "tiếp tục" cho tới khi dịch xong. Kết quả nằm ở `knowledge/paper-notes/<slug>/`; phần phân tích chỉ được tạo sau khi bản dịch qua kiểm tra độ phủ.
+- Công cụ: `.venv\Scripts\python scripts\paper_tools.py --help`. Cài lần đầu: `uv venv .venv` rồi `uv pip install --python .venv -r requirements.txt`.
 
-## Custom skills hiện có
+## Custom skills
 
-- `bci-paper-auditor`: audit chuyên sâu một paper PDF.
-- `bci-literature-review`: tổng hợp và so sánh một tập hợp paper.
-- `bci-citation-audit`: kiểm tra claim–evidence alignment và metadata trích dẫn.
-
-Không sửa các skill này khi thực hiện tác vụ nghiên cứu thông thường, trừ khi người dùng yêu cầu cập nhật skill.
+- `bci-paper-reader`: dịch toàn văn trung thành một paper, chú giải thuật ngữ, rồi phân tích.
+- `bci-literature-review`: tổng hợp và so sánh nhiều paper.
+- `bci-paper-auditor`, `bci-citation-audit`: audit phê bình, chỉ chạy khi gọi đích danh.
